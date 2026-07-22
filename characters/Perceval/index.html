@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Perceval</title>
-    <link rel="stylesheet" href="../../assets/css/style.css" />
-  </head>
-  <body>
-    <main class="page-shell character-page">
-      <div class="character-header">
-        <a class="back-link" href="../../">Retour à l’accueil</a>
-        <h1 data-page-title>Perceval</h1>
-      </div>
-      <div class="character-sheet">
-        <img src="../../assets/images/sheets/characteristic/Perceval.webp" alt="Feuille de personnage de Perceval" style="max-width: 100%; height: auto; display: block; border-radius: 12px;" />
-      </div>
-    </main>
 
-    <script src="../../assets/js/script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perceval</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/character-sheet.css">
+</head>
+
+<body>
+  <main class="page-shell character-page">
+
+    <div class="character-header">
+      <a class="back-link" href="../../">
+        Retour à l’accueil
+      </a>
+
+      <h1 data-page-title>
+        Perceval
+      </h1>
+    </div>
+
+    <div class="character-sheet" id="character-sheet">
+      <img class="character-sheet__image" src="../../assets/images/sheets/characteristic/Perceval.webp"
+        alt="Feuille de personnage de Perceval">
+
+      <div class="character-sheet__overlay" id="sheet-overlay" aria-label="Caractéristiques de Perceval"></div>
+
+      <div class="character-sheet__tooltips" id="sheet-tooltips"></div>
+    </div>
+  </main>
+
+  <script src="./perceval.config.js"></script>
+  <script src="../../assets/scripts/editor/editor-loader.js"></script>
+  <script src="../../assets/js/script.js"></script>
+</body>
+
 </html>
