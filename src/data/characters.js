@@ -1,5 +1,7 @@
 import percevalSheetImage from "../assets/images/sheets/characteristic/Perceval.webp";
 import toshiSheetImage from "../assets/images/sheets/characteristic/Toshi.webp";
+import sungSheetImage from "../assets/images/sheets/characteristic/Sung.webp";
+import meluzineSheetImage from "../assets/images/sheets/characteristic/Meluzine.webp";
 
 export const characters = [
   {
@@ -15,14 +17,16 @@ export const characters = [
     name: "Perceval",
     directory: "Perceval",
     sheetImage: percevalSheetImage,
+    showTooltipToggle: true,
     loadSheetConfig: () => import("./sheets/perceval.js"),
   },
   {
     id: "sung",
     name: "Sung",
     directory: "Sung",
-    sheetImage: null,
-    loadSheetConfig: null,
+    sheetImage: sungSheetImage,
+    showTooltipToggle: true,
+    loadSheetConfig: () => import("./sheets/sung.js"),
   },
   {
     id: "gorak",
@@ -35,8 +39,9 @@ export const characters = [
     id: "meluzine",
     name: "Meluzine",
     directory: "Meluzine",
-    sheetImage: null,
-    loadSheetConfig: null,
+    sheetImage: meluzineSheetImage,
+    showTooltipToggle: true,
+    loadSheetConfig: () => import("./sheets/meluzine.js"),
   },
   {
     id: "lux",

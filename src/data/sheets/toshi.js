@@ -86,7 +86,7 @@ const toshiSheet = {
     },
     {
       "id": "wisdom",
-      "value": 16,
+      "value": 14,
       "x": 6.5,
       "y": 76.6,
       "size": 2.2
