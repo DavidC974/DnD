@@ -1,0 +1,154 @@
+.character-sheet__tooltips {
+  position: absolute;
+  inset: 0;
+
+  z-index: 20;
+
+  pointer-events: none;
+}
+
+.sheet-tooltip-zone {
+
+  position: absolute;
+  z-index: 1;
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: auto;
+  cursor: help;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+
+    z-index: 1000;
+
+    & .sheet-tooltip-content {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-50%, 0);
+    }
+
+  }
+
+  &::before {
+
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    border-radius: 6px;
+
+    outline: 2px solid rgba(212, 175, 55, .75);
+    background: rgba(212, 175, 55, .1);
+
+  }
+
+}
+
+.sheet-tooltip-content {
+
+  position: absolute;
+
+  left: 50%;
+  bottom: calc(100% + 10px);
+
+  z-index: 3;
+
+  width: max-content;
+  max-width: 280px;
+
+  padding: .7rem .8rem;
+
+  border: 1px solid rgba(212, 175, 55, .8);
+  border-radius: 8px;
+
+  background: rgb(18, 15, 10);
+  color: #f5ead2;
+
+  font-size: 14px;
+  line-height: 1.4;
+
+  white-space: normal;
+  text-align: left;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translate(-50%, 6px);
+
+  transition:
+    opacity .15s,
+    transform .15s,
+    visibility .15s;
+
+  pointer-events: none;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .45);
+
+  &::after {
+
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    top: 100%;
+
+    transform: translateX(-50%);
+
+    border: 7px solid transparent;
+    border-top-color: rgb(18, 15, 10);
+
+  }
+
+}
+
+.sheet-tooltip-title {
+  display: block;
+  margin-bottom: .25rem;
+
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.character-sheet.edit-mode {
+
+  & .sheet-tooltip-zone {
+
+    cursor: grab;
+
+    outline: 2px dashed #00c8ff;
+    background: rgba(0, 200, 255, .18);
+
+    &:hover {
+
+      outline: 2px solid yellow;
+      background: rgba(255, 255, 0, .2);
+
+    }
+
+    &.is-selected {
+
+      outline: 2px solid cyan;
+      background: rgba(0, 255, 255, .25);
+
+    }
+
+    &.is-dragging {
+
+      cursor: grabbing;
+
+    }
+
+  }
+
+  & .sheet-tooltip-content {
+
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+
+  }
+
+}

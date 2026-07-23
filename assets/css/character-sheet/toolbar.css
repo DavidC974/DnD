@@ -1,0 +1,80 @@
+.sheet-editor-toolbar {
+
+  display: flex;
+  justify-content: center;
+  gap: .75rem;
+
+  margin-bottom: .75rem;
+
+  &:not(.toolbar-visible) {
+    display: none;
+  }
+
+  & button {
+
+    padding: .5rem .8rem;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    background: var(--panel);
+    color: var(--text);
+
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--accent);
+    }
+
+  }
+
+}
+
+#toggle-edit-mode.is-active {
+
+  background: var(--accent);
+  color: #120f0a;
+
+}
+
+#toggle-tooltip-mode {
+
+  &.is-active {
+
+    background: #00c8ff;
+    color: #120f0a;
+
+  }
+
+  &:disabled {
+
+    opacity: .45;
+    cursor: not-allowed;
+
+  }
+
+}
+
+.coordinate-display {
+
+  position: fixed;
+
+  right: 1rem;
+  bottom: 1rem;
+
+  z-index: 9999;
+
+  padding: .5rem .75rem;
+
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+
+  background: rgba(0, 0, 0, .85);
+  color: white;
+
+  font-family: monospace;
+  font-size: 14px;
+
+  pointer-events: none;
+
+}

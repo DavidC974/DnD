@@ -1,0 +1,76 @@
+.sheet-field {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  transform: translate(-50%, -50%);
+
+  color: #111;
+
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+.character-sheet.edit-mode {
+
+  & .sheet-field {
+
+    min-width: 20px;
+    min-height: 20px;
+    padding: 3px 5px;
+
+    outline: 1px solid rgba(255, 0, 0, .9);
+    background: rgba(255, 0, 0, .2);
+
+    pointer-events: auto;
+    cursor: grab;
+
+    &:hover {
+      outline: 2px solid yellow;
+      background: rgba(255, 255, 0, .25);
+    }
+
+    &.is-selected {
+      outline: 2px solid cyan;
+      background: rgba(0, 255, 255, .25);
+    }
+
+    &.is-dragging {
+      cursor: grabbing;
+    }
+
+  }
+
+}
+
+/* Debug */
+
+.character-sheet.debug {
+
+  & .sheet-field {
+
+    padding: .1rem .25rem;
+
+    border: 1px solid rgba(255, 0, 0, .8);
+    border-radius: 4px;
+
+    background: rgba(255, 0, 0, .2);
+
+    &::after {
+      content: attr(data-field-id);
+
+      display: block;
+      margin-top: .2rem;
+
+      color: #ff6b6b;
+      font-size: .6em;
+    }
+
+  }
+
+}

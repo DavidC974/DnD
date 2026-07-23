@@ -1,0 +1,89 @@
+.field-editor {
+
+  position: fixed;
+
+  right: 1rem;
+  bottom: 1rem;
+
+  z-index: 10000;
+
+  width: min(320px, calc(100% - 2rem));
+
+  padding: 1rem;
+
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+
+  color: var(--text);
+  background: rgba(18, 15, 10, .98);
+
+  & h2 {
+    margin: 0 0 .75rem;
+    font-size: 1.1rem;
+  }
+
+  & label {
+
+    display: block;
+    margin-bottom: .7rem;
+
+    color: var(--muted);
+
+  }
+
+  & input,
+  & textarea {
+
+    display: block;
+    width: 100%;
+
+    margin-top: .2rem;
+    padding: .45rem;
+
+    border: 1px solid var(--border);
+    border-radius: 6px;
+
+    background: var(--panel);
+    color: var(--text);
+
+  }
+
+  & textarea {
+
+    min-height: 100px;
+
+    font: inherit;
+    resize: vertical;
+
+  }
+
+  & .field-editor-coordinates {
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: .75rem;
+
+    color: var(--accent);
+
+    font-family: monospace;
+
+  }
+
+  & .field-editor-buttons {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+
+  }
+
+  & #delete-field,
+  & #delete-tooltip {
+
+    border-color: rgba(255, 80, 80, .8);
+    color: #ffaaaa;
+
+  }
+
+}
