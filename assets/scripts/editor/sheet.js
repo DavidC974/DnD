@@ -79,6 +79,8 @@ function initializeCharacterSheet() {
   const editButton = document.querySelector("#toggle-edit-mode");
   const tooltipModeButton = document.querySelector("#toggle-tooltip-mode");
   const exportButton = document.querySelector("#export-config");
+
+  const tooltipZonesCheckbox = document.querySelector("#toggle-tooltip-zones");
   const toolbar = document.querySelector(".sheet-editor-toolbar");
 
   const editor = document.querySelector("#field-editor");
@@ -574,6 +576,15 @@ function initializeCharacterSheet() {
     "click",
     toggleTooltipMode
   );
+
+  if (tooltipZonesCheckbox) {
+    tooltipZonesCheckbox.addEventListener("change", () => {
+      sheet.classList.toggle(
+        "hide-tooltip-zones",
+        !tooltipZonesCheckbox.checked
+      );
+    });
+  }
 
   document.addEventListener("keydown", (event) => {
     const active = document.activeElement;

@@ -1,20 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Toshi</title>
-    <link rel="stylesheet" href="../../assets/css/style.css" />
-  </head>
-  <body>
-    <main class="page-shell character-page">
-      <a class="back-link" href="../../">Retour à l’accueil</a>
-      <h1 data-page-title>Toshi</h1>
-      <div class="character-sheet">
-        <!-- Image à ajouter ici -->
-      </div>
-    </main>
 
-    <script src="../../assets/js/script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toshi</title>
+  <link rel="stylesheet" href="../../assets/css/theme.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+
+  <link rel="stylesheet" href="../../assets/css/character-sheet/sheet.css">
+  <link rel="stylesheet" href="../../assets/css/character-sheet/fields.css">
+  <link rel="stylesheet" href="../../assets/css/character-sheet/tooltips.css">
+  <link rel="stylesheet" href="../../assets/css/character-sheet/editor.css">
+  <link rel="stylesheet" href="../../assets/css/character-sheet/toolbar.css">
+</head>
+
+<body>
+  <main class="page-shell character-page">
+
+    <div class="character-header">
+      <a class="back-link" href="../../">
+        Retour à l’accueil
+      </a>
+
+      <h1 data-page-title>
+        Toshi
+      </h1>
+
+      <label class="header-checkbox">
+        <input type="checkbox" id="toggle-tooltip-zones" checked>
+        InfoBulles
+      </label>
+    </div>
+
+    <div class="character-sheet" id="character-sheet">
+      <img class="character-sheet__image" src="../../assets/images/sheets/characteristic/Toshi.webp"
+        alt="Feuille de personnage de Toshi">
+
+      <div class="character-sheet__overlay" id="sheet-overlay" aria-label="Caractéristiques de Toshi"></div>
+
+      <div class="character-sheet__tooltips" id="sheet-tooltips"></div>
+    </div>
+  </main>
+
+  <script src="./toshi.config.js"></script>
+  <script src="../../assets/scripts/editor/editor-loader.js"></script>
+  <script src="../../assets/js/script.js"></script>
+</body>
+
 </html>

@@ -150,5 +150,15 @@
     visibility: hidden;
 
   }
+}
 
+.character-sheet.hide-tooltip-zones .sheet-tooltip-zone::before {
+  display: none;
+}
+
+.character-sheet.hide-tooltip-zones.edit-mode .sheet-tooltip-zone,
+.character-sheet.hide-tooltip-zones.edit-mode .sheet-tooltip-zone:hover,
+.character-sheet.hide-tooltip-zones.edit-mode .sheet-tooltip-zone.is-selected {
+  outline: none;
+  background: transparent;
 }
